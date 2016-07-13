@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="Camera2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7M-Py-jwL">
+                                <rect key="frame" x="277" y="550" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8I9-m2-7pZ"/>
+                                    <constraint firstAttribute="width" constant="46" id="Gix-jv-84M"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gaj-3b-VGk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JzO-h1-gel">
+                                <rect key="frame" x="20" y="28" width="560" height="514"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQT-cu-qMN">
+                                <rect key="frame" x="262" y="255" width="76" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="T1k-N0-XD3"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="camera-icon.png"/>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p61-F0-zwa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JzO-h1-gel" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0hR-cY-vO6"/>
+                            <constraint firstItem="JzO-h1-gel" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="JFV-9e-VjH"/>
+                            <constraint firstItem="C7M-Py-jwL" firstAttribute="centerX" secondItem="CQT-cu-qMN" secondAttribute="centerX" id="LxQ-kn-LRO"/>
+                            <constraint firstItem="C7M-Py-jwL" firstAttribute="top" secondItem="JzO-h1-gel" secondAttribute="bottom" constant="8" symbolic="YES" id="MtH-8B-lqz"/>
+                            <constraint firstAttribute="bottom" secondItem="C7M-Py-jwL" secondAttribute="bottom" constant="20" symbolic="YES" id="TdJ-Id-yLa"/>
+                            <constraint firstItem="CQT-cu-qMN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="235" id="iVG-CH-ukj"/>
+                            <constraint firstItem="CQT-cu-qMN" firstAttribute="centerY" secondItem="JzO-h1-gel" secondAttribute="centerY" id="mwz-ma-1Wl"/>
+                            <constraint firstItem="JzO-h1-gel" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="sV7-Cr-V4p"/>
+                            <constraint firstItem="CQT-cu-qMN" firstAttribute="centerX" secondItem="JzO-h1-gel" secondAttribute="centerX" id="zI0-zZ-QDL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="CQT-cu-qMN" id="QHx-1c-8MP"/>
+                        <outlet property="photoImageView" destination="JzO-h1-gel" id="RNN-Vu-AUQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="305"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera-icon.png" width="1024" height="1024"/>
+    </resources>
+</document>
